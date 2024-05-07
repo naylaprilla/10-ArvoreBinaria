@@ -71,7 +71,7 @@ void menu()
 void inicializar()
 {
 
-	// provis�rio porque n�o libera a memoria usada pela arvore
+	// provisório porque não libera a memoria usada pela arvore
 	NO* raiz = NULL;
 	
 	cout << "Arvore inicializada \n";
@@ -152,5 +152,12 @@ int elementosArvore(NO* no)
 
 void exibirElementosArvore(NO* no)
 {
-	
+	if (no != NULL) {
+		cout << no->valor << endl;
+		exibirElementosArvore(no->esq);
+		exibirElementosArvore(no->dir);
+	}
+	//cout << exibirElementosArvore(no->esq = valor)  << endl;
+	//cout << exibirElementosArvore(no->dir = valor) << endl;
+	//nó da direita e da esquerda não aparece  - toda vez que entra na função exibe o valor que está ali -  vai aparecer em ordem diferente.
 }
